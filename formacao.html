@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Formação - Meu Website</title>
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+
+  <link rel="stylesheet" href="CSS/style.css">
+  </head>
+<body>
+<!-- Ficheiro de Áudio -->
+<audio id="musica-site" src="Audio/mar_adentro.mp3" loop></audio>
+
+<!-- Botão para Ligar/Desligar Música colocado logo após o cabeçalho -->
+<div class="zona-controlo-som">
+  <button id="botao-som" onclick="alternarSom()">🔈 Desligar Som</button>
+</div>
+
+  <!-- 1. Cabeçalho Fixo (Igual à página inicial) -->
+  <div class="cabecalho">
+    <h1>Formação e Percurso Escolar</h1>
+    <h1>Luis Filipe Curado</h1>
+
+    <nav>
+      <a href="index.html">Apresentação</a>
+      <a href="formacao.html">Formação</a>
+      <a href="minha_familia.html">Minha Familia</a>
+    </nav>
+  </div>
+
+  <!-- Contentor da Formação (Ocupa o centro do site) -->
+  <div class="conteudo-formacao">
+
+    <div class="bloco-formacao">
+       <h2>O percurso Profissional</h2>
+        <p>Abandonou a escola no 7º ano e começou a trabalhar cedo: carpintaria, fábrica de candeeiros, e como afagador de pedra em Lisboa (onde começou a ganhar bem). Trabalhou como ajudante de eletricista, uma profissão de que gostava muito e que lhe dava estabilidade financeira. Conseguiu o trabalho que sonhava na Nissan Entreposto, como ajudante de pintor automóvel, onde se estava a preparar para ser pintor efetivo.</p>
+
+
+      <!-- PARTE 1: 9º Ano -->
+     <br> <h2>Conclusão do 9º Ano</h2>
+      <p>Conclusão do 9º ano, RVCC no centro qualifica do Pinhal Novo,
+        e festejado com um jantar, com colegas, na Casa das Bifanas Palmela.</p>
+      
+      <div class="galeria-fotos">
+        <img src="Imagens/9_rvcc_1.jpg" alt="Momento 9º Ano 1">
+        <img src="Imagens/9_rvcc_2.jpg" alt="Momento 9º Ano 2">
+        <img src="Imagens/9_rvcc_3.jpg" alt="Momento 9º Ano 3">
+        <img src="Imagens/9_rvcc_4.jpg" alt="Momento 9º Ano 4">
+
+        <img src="Imagens/9_rvcc_diploma.jpg" alt="Momento 9º Ano 5">
+        <img src="Imagens/9_rvcc_diploma_2.jpg" alt="Momento 9º Ano 6">
+      </div>
+    </div>
+
+    <!-- PARTE 2: 12º Ano Técnico Multimédia -->
+    <div class="bloco-formacao">
+      <h2>12º Ano - Técnico de Multimédia nível 4</h2>
+      <p>Desenvolvimento de competências em design, edição de imagem (Photoshop), vídeo (Premiere) , e som com o (Audacity) e estruturação web (html, css, php, c, c++,) modelação 3D (Blender), no IEFP Setúbal. Uma viragem importante para o mundo digital.</p>
+      
+      <h3>Fotografias do Curso</h3>
+      <div class="galeria-fotos">
+        <img src="Imagens/multimedia (1).jpg" alt="Curso Multimédia 1">
+        <img src="Imagens/multimedia (2).jpg" alt="Curso Multimédia 2">
+        <img src="Imagens/multimedia (3).jpg" alt="Curso Multimédia 3">
+        <img src="Imagens/multimedia (4).png" alt="Curso Multimédia 4">
+        <img src="Imagens/multimedia (1).png" alt="Curso Multimédia 5">
+        <img src="Imagens/multimedia (2).png" alt="Curso Multimédia 6">
+        <img src="Imagens/multimedia (3).png" alt="Curso Multimédia 7">
+        <img src="Imagens/multimedia (4).jpg" alt="Curso Multimédia 8">
+
+
+      </div>
+
+      <h3>Diplomas e Certificados</h3>
+      <div class="galeria-diplomas">
+        <img src="Imagens/12_diploma (1).jpg" alt="Diploma Multimédia 1">
+        <img src="Imagens/12_diploma (2).jpg" alt="Diploma Multimédia 2">
+        <img src="Imagens/12_diploma (3).jpg" alt="Diploma Multimédia 3">
+      </div>
+    </div>
+
+    <!-- PARTE 3: Técnico Especialista -->
+    <div class="bloco-formacao">
+      <h2>Técnico Especialista em Aplicações de Informática de Gestão</h2>
+      <p>Especialização avançada focada em sistemas de informação, redes e gestão tecnológica, incluindo a prestigiada certificação da Cisco Academy.</p>
+      
+      <h3>Certificação Cisco</h3>
+      <div class="galeria-cisco">
+        <img src="Imagens/cisco_diploma_2.JPG" alt="Diploma Cisco 1">
+        <img src="Imagens/cisco_diploma_3.JPG" alt="Diploma Cisco 2">
+        <img src="Imagens/cisco_diploma.JPG" alt="Diploma Cisco 3">
+
+      </div>
+
+      <h3>Fotografias e Momentos</h3>
+      <div class="galeria-fotos">
+        <img src="Imagens/cisco_1.JPG" alt="Aplicações de Gestão 1">
+        <img src="Imagens/cisco_2.JPG" alt="Aplicações de Gestão 2">
+        <img src="Imagens/cisco_3.JPG" alt="Aplicações de Gestão 3">
+        <img src="Imagens/cisco_4.JPG" alt="Aplicações de Gestão 4">
+      </div>
+    </div>
+
+  </div>
+
+<!-- Código para fazer o cabeçalho desaparecer gradualmente ao descer a página -->
+    <!-- Código Unificado: Efeito de Fade-out + Música de Fundo -->
+  <script>
+   // --- 1. EFEITO DE DESVANECIMENTO DO TOPO E DO BOTÃO (SCROLL) ---
+window.addEventListener('scroll', function() {
+  const cabecalho = document.querySelector('.cabecalho');
+  const zonaSom = document.querySelector('.zona-controlo-som'); // Seleciona o botão de som
+  const pixelsDescidos = window.scrollY;
+  const pontoDeDesaparecimento = 300;
+  
+  let novaOpacidade = 1 - (pixelsDescidos / pontoDeDesaparecimento);
+  
+  if (novaOpacidade < 0) novaOpacidade = 0;
+  
+  // Aplica a transparência suave ao cabeçalho e ao botão ao mesmo tempo
+  cabecalho.style.opacity = novaOpacidade;
+  if (zonaSom) zonaSom.style.opacity = novaOpacidade;
+  
+  // Esconde os elementos para não bloquear os cliques no texto
+  if (novaOpacidade === 0) {
+    cabecalho.style.pointerEvents = 'none';
+    if (zonaSom) zonaSom.style.pointerEvents = 'none';
+  } else {
+    cabecalho.style.pointerEvents = 'auto';
+    if (zonaSom) zonaSom.style.pointerEvents = 'auto';
+  }
+ });
+
+    // --- 2. CONTROLO DA MÚSICA DE FUNDO (MAR ADENTRO) ---
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('musica-site');
+      
+      audio.play().catch(() => {
+        console.log("Som automático bloqueado. Ativando ao primeiro clique.");
+        
+        document.addEventListener('click', () => {
+          audio.play();
+        }, { once: true });
+      });
+    });
+    // Função para o botão ligar e desligar o som
+function alternarSom() {
+  const audio = document.getElementById('musica-site');
+  const botao = document.getElementById('botao-som');
+  
+  if (audio.paused) {
+    audio.play();
+    botao.innerHTML = "🔈 Desligar Som";
+    botao.style.backgroundColor = "#f39c12"; // Fica laranja quando toca
+  } else {
+    audio.pause();
+    botao.innerHTML = "🔇 Ligar Som";
+    botao.style.backgroundColor = "#5a4a42"; // Fica castanho quando para
+  }
+}
+    // --- 3. CONTADOR DE VISITAS DINÂMICO (A COMEÇAR A 0) ---
+    window.addEventListener('DOMContentLoaded', () => {
+      let visitasAtuais = localStorage.getItem('contagem_visitas_site');
+      
+      if (visitasAtuais === null) {
+        // CORREÇÃO: Começa estritamente a 0 no primeiro acesso
+        visitasAtuais = 0; 
+      } else {
+        visitasAtuais = parseInt(visitasAtuais) + 1;
+      }
+      
+      localStorage.setItem('contagem_visitas_site', visitasAtuais);
+      
+      // Formata o número para exibir sempre com 6 dígitos (ex: 000001)
+      const numeroFormatado = String(visitasAtuais).padStart(6, '0');
+      
+      const elementoContador = document.getElementById('numero-contador');
+      if (elementoContador) {
+        elementoContador.innerText = numeroFormatado;
+      }
+    });
+
+
+
+</script>
+
+  <!-- 5. Rodapé com Contador de Visitas Dinâmico -->
+  <div class="rodape">
+    <p>&copy; 2026 - Trabalho Realizado por - Luis Filipe Curado - IEFP - Alcoitão</p>
+    
+    <!-- Estrutura visual do contador -->
+    <div class="caixa-contador">
+      <span class="icone-contador">👥</span>
+      <span class="texto-contador">Visitas ao Site:</span>
+      <span id="numero-contador" class="digitos-contador">000000</span>
+    </div>
+  </div>
+
+</body>
+</html>
